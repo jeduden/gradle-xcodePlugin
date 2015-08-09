@@ -69,8 +69,7 @@ class ProgressLoggerStub implements ProgressLogger {
 
 	}
 
-	@Override
-	long currentOperationId() {
-		return 0
+	org.gradle.internal.progress.OperationIdentifier currentOperationId() {
+		return null
 	}
 }
