@@ -30,7 +30,7 @@ if (project.hasProperty("buildNumber")) {
 }
 
 
-group = 'org.openbakery'
+group = 'nl.duden'
 version = versionNumber
 
 
@@ -72,39 +72,6 @@ dependencies {
 }
 
 
-
-
-
-
-uploadArchives {
-	repositories {
-		mavenDeployer {
-      configuration = configurations.deployerJars
-			
-			repository(url: publishURL) {
-				authentication(userName: publishUser, password: publishPassword)
-			}
-			
-			pom.project {
-				licenses {
-					license {
-						name 'The Apache Software License, Version 2.0'
-						url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-						distribution 'repo'
-					}
-				}
-				developers {
-			  	developer {
-						id "renep"
-			      name "René Pirringer"
-			      email "rene@openbakery.org"
-					}
-				}
-			}
-		}
-	}
-}
-
 test {
 	useTestNG()
 }
@@ -115,7 +82,9 @@ task sourcesJar(type: Jar) {
     classifier = 'sources'
 }
 
-
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.5'
+}
 
 pluginBundle {
   website = 'http://openbakery.org/gradle.php'
@@ -125,7 +94,7 @@ pluginBundle {
 
   plugins {
     xcodePlugin {
-      id = 'org.openbakery.xcode-plugin'
+      id = 'nl.duden.xcode-plugin'
       displayName = 'Gradle Xcode plugin'
 			version = versionNumber
     }
