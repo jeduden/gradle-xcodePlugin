@@ -1,5 +1,11 @@
-gradle-xcodePlugin
-==================
+Fork of gradle-xcodePlugin
+==========================
+
+## Changes in the fork
+
+* Includes Gradle 2.5 fixes
+
+## Original Notes
 
 gradle-xcodePlugin makes it easier to build Mac and iOS projects by specifying the build settings in a single configuration file. The goal is to keep the build file as simple as possible, but also enable a great flexibility for the build.
 
