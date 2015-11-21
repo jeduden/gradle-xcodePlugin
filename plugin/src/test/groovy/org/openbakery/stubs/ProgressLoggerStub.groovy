@@ -15,8 +15,8 @@ class ProgressLoggerStub implements ProgressLogger {
 	}
 
 	@Override
-	void setDescription(String s) {
-
+	ProgressLogger setDescription(String s) {
+    return this
 	}
 
 	@Override
@@ -25,8 +25,8 @@ class ProgressLoggerStub implements ProgressLogger {
 	}
 
 	@Override
-	void setShortDescription(String s) {
-
+	ProgressLogger setShortDescription(String s) {
+    return this
 	}
 
 	@Override
@@ -35,13 +35,13 @@ class ProgressLoggerStub implements ProgressLogger {
 	}
 
 	@Override
-	void setLoggingHeader(String s) {
-
+	ProgressLogger setLoggingHeader(String s) {
+    return this
 	}
 
 	@Override
 	ProgressLogger start(String s, String s1) {
-		return null
+		return this
 	}
 
 	@Override
@@ -67,9 +67,5 @@ class ProgressLoggerStub implements ProgressLogger {
 	@Override
 	void completed(String s) {
 
-	}
-
-	org.gradle.internal.progress.OperationIdentifier currentOperationId() {
-		return null
 	}
 }
